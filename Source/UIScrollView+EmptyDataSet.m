@@ -736,6 +736,7 @@ Class dzn_baseClassToSwizzleForTarget(id target)
 - (void)didMoveToSuperview
 {
     self.frame = self.superview.bounds;
+    [self.superview bringSubviewToFront:self];
     
     void(^fadeInBlock)(void) = ^{_contentView.alpha = 1.0;};
     
