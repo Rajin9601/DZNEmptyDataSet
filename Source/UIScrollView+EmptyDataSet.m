@@ -1031,7 +1031,7 @@ Class dzn_baseClassToSwizzleForTarget(id target)
     }
     
     // Return either the contentView or customView
-    if ([hitView isEqual:_contentView] || [hitView isEqual:_customView]) {
+    if ([hitView isEqual:_contentView] || [hitView isDescendantOfView:_customView]) {
         return hitView;
     }
     
